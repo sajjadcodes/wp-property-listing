@@ -1,0 +1,415 @@
+/**
+ * Property Listings Manager - Admin Styles
+ * Styling for admin dashboard and property management interface
+ */
+
+/* Property Meta Box Styles */
+.property-meta-fields {
+    padding: 10px 0;
+}
+
+.property-meta-fields p {
+    margin-bottom: 15px;
+}
+
+.property-meta-fields label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.property-meta-fields input[type="text"],
+.property-meta-fields input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.property-meta-fields input[type="text"]:focus,
+.property-meta-fields input[type="number"]:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.property-meta-fields input[readonly] {
+    background-color: #f0f0f1;
+    cursor: not-allowed;
+}
+
+#fetch_location {
+    margin-top: 10px;
+    background-color: #2271b1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#fetch_location:hover {
+    background-color: #135e96;
+}
+
+#fetch_location:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#zip_loading {
+    margin-left: 10px;
+    color: #2271b1;
+    font-style: italic;
+}
+
+/* Admin Page Styles */
+.wrap h1 {
+    margin-bottom: 20px;
+}
+
+/* Search and Filter Section */
+#property-search {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#property-search:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+#search-loading {
+    color: #2271b1;
+    font-style: italic;
+    vertical-align: middle;
+}
+
+/* Date Picker Styling */
+#start-date,
+#end-date {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#filter-by-date,
+#reset-date-filter {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* Price Slider */
+#price-slider {
+    margin: 10px 0;
+    background: #f0f0f1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 8px;
+}
+
+#price-slider .ui-slider-range {
+    background: #2271b1;
+}
+
+#price-slider .ui-slider-handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #2271b1;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    top: -6px;
+}
+
+#price-slider .ui-slider-handle:hover {
+    background: #135e96;
+}
+
+#price-slider .ui-slider-handle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.3);
+}
+
+#price-range-display {
+    font-weight: 600;
+    color: #2271b1;
+    vertical-align: middle;
+}
+
+/* Agent Filter */
+#agent-filter {
+    min-width: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Export Button */
+#export-csv {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#export-csv:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Properties Table */
+#properties-table-container {
+    margin-top: 20px;
+    background: white;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.wp-list-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.wp-list-table thead th {
+    background: #f6f7f7;
+    border-bottom: 2px solid #ccd0d4;
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: #2c3338;
+}
+
+.wp-list-table tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e1e1e1;
+    vertical-align: middle;
+}
+
+.wp-list-table tbody tr:hover {
+    background-color: #f6f7f7;
+}
+
+.wp-list-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.wp-list-table .button-small {
+    padding: 4px 10px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Pagination */
+.tablenav {
+    padding: 15px 10px;
+    background: #f6f7f7;
+    border-top: 1px solid #ccd0d4;
+}
+
+.tablenav-pages {
+    text-align: right;
+}
+
+.tablenav-pages a,
+.tablenav-pages span.current {
+    padding: 6px 12px;
+    margin: 0 2px;
+    border: 1px solid #ccd0d4;
+    background: white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.tablenav-pages a:hover {
+    background: #f0f0f1;
+    border-color: #0a4b78;
+}
+
+.tablenav-pages span.current {
+    background: #2271b1;
+    color: white;
+    border-color: #2271b1;
+}
+
+/* Loading States */
+.loading-overlay {
+    position: relative;
+}
+
+.loading-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Notices */
+.property-meta-fields .notice {
+    margin: 15px 0;
+    padding: 12px;
+    border-left: 4px solid;
+    background: white;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.property-meta-fields .notice-success {
+    border-left-color: #00a32a;
+}
+
+.property-meta-fields .notice-error {
+    border-left-color: #d63638;
+}
+
+.property-meta-fields .notice-warning {
+    border-left-color: #dba617;
+}
+
+.property-meta-fields .notice-info {
+    border-left-color: #2271b1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .property-meta-fields input[type="text"],
+    .property-meta-fields input[type="number"] {
+        width: 100% !important;
+    }
+    
+    #property-search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #start-date,
+    #end-date {
+        width: calc(50% - 5px);
+    }
+    
+    #price-slider {
+        width: 100% !important;
+        margin: 15px 0;
+    }
+    
+    #agent-filter {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .wp-list-table {
+        font-size: 12px;
+    }
+    
+    .wp-list-table thead th,
+    .wp-list-table tbody td {
+        padding: 8px 5px;
+    }
+}
+
+/* Filter Section Styling */
+.filter-section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.filter-row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-row label {
+    margin-right: 10px;
+    font-weight: 600;
+    min-width: 150px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.property-meta-fields .notice {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Button Hover Effects */
+.button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Smooth Transitions */
+input,
+select,
+button {
+    transition: all 0.3s ease;
+}
+
+/* Focus Styles for Accessibility */
+input:focus,
+select:focus,
+button:focus {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #646970;
+}
+
+.empty-state h3 {
+    margin-bottom: 10px;
+    color: #2c3338;
+}
+
+/* Success Highlight Animation */
+@keyframes highlight {
+    0% {
+        background-color: #d4edda;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.highlight-success {
+    animation: highlight 2s ease;
+}

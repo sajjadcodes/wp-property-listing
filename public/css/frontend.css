@@ -1,0 +1,172 @@
+/**
+ * Property Listings Manager - Frontend Styles
+ * Styling for shortcode display on frontend pages
+ */
+
+/* Property Listings Grid */
+.property-listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Property Item Card */
+.property-item {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Property Title */
+.property-item h3 {
+    margin: 0;
+    padding: 20px 20px 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3338;
+    border-bottom: 2px solid #f0f0f1;
+}
+
+/* Property Thumbnail */
+.property-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Property Details */
+.property-item p {
+    margin: 10px 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+.property-item p:last-child {
+    margin-bottom: 20px;
+}
+
+.property-item p strong {
+    color: #2c3338;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 100px;
+}
+
+/* Price Styling */
+.property-item p:has(strong:contains("Price")) {
+    font-size: 18px;
+    color: #2271b1;
+    font-weight: 600;
+}
+
+/* Responsive Grid */
+@media screen and (max-width: 1200px) {
+    .property-listings-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .property-listings-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .property-item h3 {
+        font-size: 20px;
+        padding: 15px 15px 12px;
+    }
+    
+    .property-item p {
+        margin: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .property-item img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .property-listings-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .property-item {
+        max-width: 100%;
+    }
+}
+
+/* No Properties Found */
+.property-listings-grid + p {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 16px;
+    color: #646970;
+    background: #f6f7f7;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+}
+
+/* Loading State */
+.property-listings-loading {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 16px;
+    color: #2271b1;
+}
+
+.property-listings-loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f0f0f1;
+    border-top-color: #2271b1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Property Details Icons (Optional Enhancement) */
+.property-detail-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Agent Badge */
+.property-agent-badge {
+    display: inline-block;
+    background: #2271b1;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 10px;
+}
